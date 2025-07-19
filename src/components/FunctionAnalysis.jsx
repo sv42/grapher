@@ -152,91 +152,91 @@ function FunctionAnalysis({ functionExpression, xMin, xMax }) {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-6">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {/* Основні властивості */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">
+        <div className="space-y-3 sm:space-y-4">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-800 border-b pb-2">
             Основні властивості
           </h3>
           
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Область визначення:</span>
-              <span className="font-medium">{analysis.domain}</span>
+          <div className="space-y-2 sm:space-y-3">
+            <div className="flex flex-col sm:flex-row sm:justify-between">
+              <span className="text-gray-600 text-sm sm:text-base">Область визначення:</span>
+              <span className="font-medium text-sm sm:text-base">{analysis.domain}</span>
             </div>
             
-            <div className="flex justify-between">
-              <span className="text-gray-600">Область значень:</span>
-              <span className="font-medium">{analysis.range}</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between">
+              <span className="text-gray-600 text-sm sm:text-base">Область значень:</span>
+              <span className="font-medium text-sm sm:text-base">{analysis.range}</span>
             </div>
             
-            <div className="flex justify-between">
-              <span className="text-gray-600">Кількість точок:</span>
-              <span className="font-medium">{analysis.totalPoints}</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between">
+              <span className="text-gray-600 text-sm sm:text-base">Кількість точок:</span>
+              <span className="font-medium text-sm sm:text-base">{analysis.totalPoints}</span>
             </div>
           </div>
         </div>
 
         {/* Екстремуми */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">
+        <div className="space-y-3 sm:space-y-4">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-800 border-b pb-2">
             Екстремуми
           </h3>
           
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Мінімум:</span>
-              <span className="font-medium">f({analysis.minX}) = {analysis.minValue}</span>
+          <div className="space-y-2 sm:space-y-3">
+            <div className="flex flex-col sm:flex-row sm:justify-between">
+              <span className="text-gray-600 text-sm sm:text-base">Мінімум:</span>
+              <span className="font-medium text-sm sm:text-base">f({analysis.minX}) = {analysis.minValue}</span>
             </div>
             
-            <div className="flex justify-between">
-              <span className="text-gray-600">Максимум:</span>
-              <span className="font-medium">f({analysis.maxX}) = {analysis.maxValue}</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between">
+              <span className="text-gray-600 text-sm sm:text-base">Максимум:</span>
+              <span className="font-medium text-sm sm:text-base">f({analysis.maxX}) = {analysis.maxValue}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Нулі функції */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">
+      <div className="space-y-3 sm:space-y-4">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-800 border-b pb-2">
           Нулі функції (f(x) = 0)
         </h3>
         
         {analysis.zeros.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3">
             {analysis.zeros.map((zero, index) => (
-              <div key={index} className="bg-blue-50 p-3 rounded-lg text-center">
-                <div className="text-sm text-gray-600">x{index + 1}</div>
-                <div className="font-medium text-blue-700">{zero.toFixed(3)}</div>
+              <div key={index} className="bg-blue-50 p-2 sm:p-3 rounded-lg text-center">
+                <div className="text-xs sm:text-sm text-gray-600">x{index + 1}</div>
+                <div className="font-medium text-blue-700 text-sm sm:text-base">{zero.toFixed(3)}</div>
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-gray-500">Нулі не знайдено в заданому діапазоні</p>
+          <p className="text-gray-500 text-sm sm:text-base">Нулі не знайдено в заданому діапазоні</p>
         )}
       </div>
 
       {/* Критичні точки */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">
+      <div className="space-y-3 sm:space-y-4">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-800 border-b pb-2">
           Критичні точки (f'(x) ≈ 0)
         </h3>
         
         {analysis.extrema.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
             {analysis.extrema.map((point, index) => (
-              <div key={index} className="bg-green-50 p-3 rounded-lg">
-                <div className="text-sm text-gray-600">Точка {index + 1}</div>
-                <div className="font-medium text-green-700">
+              <div key={index} className="bg-green-50 p-2 sm:p-3 rounded-lg">
+                <div className="text-xs sm:text-sm text-gray-600">Точка {index + 1}</div>
+                <div className="font-medium text-green-700 text-sm sm:text-base">
                   ({point.x.toFixed(3)}, {point.y.toFixed(3)})
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-gray-500">Критичні точки не знайдено в заданому діапазоні</p>
+          <p className="text-gray-500 text-sm sm:text-base">Критичні точки не знайдено в заданому діапазоні</p>
         )}
       </div>
     </div>

@@ -24,17 +24,17 @@ function Examples({ onSelectExample }) {
         <h2 className="text-xl font-bold text-gray-800">Приклади функцій</h2>
       </div>
       
-      <div className="grid grid-cols-1 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {examples.map((example, index) => (
           <button
             key={index}
             onClick={() => onSelectExample(example.expression)}
-            className="text-left p-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-200 group"
+            className="text-left p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-200 group"
           >
-            <div className="font-medium text-gray-800 group-hover:text-primary-700">
+            <div className="font-medium text-gray-800 group-hover:text-primary-700 text-sm sm:text-base">
               {example.name}
             </div>
-            <div className="text-sm text-gray-600 group-hover:text-primary-600">
+            <div className="text-xs sm:text-sm text-gray-600 group-hover:text-primary-600">
               {example.description}
             </div>
           </button>

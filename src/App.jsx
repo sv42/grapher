@@ -21,10 +21,10 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Header />
       
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-3 gap-8">
+      <main className="container mx-auto px-4 py-4 sm:py-8">
+        <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
           {/* Панель керування */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="lg:col-span-1 space-y-4 lg:space-y-6 order-2 lg:order-1">
             <div className="card">
               <h2 className="text-xl font-bold mb-4 text-gray-800">Налаштування графіка</h2>
               
@@ -125,7 +125,7 @@ function App() {
           </div>
 
           {/* Графік та аналіз */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-1 lg:order-2">
             <div className="card">
               <TabPanel activeTab={activeTab} onTabChange={setActiveTab}>
                 {activeTab === 'graph' && (

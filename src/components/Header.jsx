@@ -4,26 +4,26 @@ import { TrendingUp, Github } from 'lucide-react'
 function Header() {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-primary-600 rounded-lg">
-              <TrendingUp className="w-6 h-6 text-white" />
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="p-1.5 sm:p-2 bg-primary-600 rounded-lg">
+              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Function Grapher</h1>
-              <p className="text-sm text-gray-600">Інтерактивний графік функцій</p>
+              <h1 className="text-lg sm:text-2xl font-bold text-gray-900">Function Grapher</h1>
+              <p className="text-xs sm:text-sm text-gray-600">Інтерактивний графік функцій</p>
             </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <a
               href="https://github.com/sv42/grapher"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="flex items-center space-x-1 sm:space-x-2 text-gray-600 hover:text-gray-900 transition-colors p-2 rounded-lg hover:bg-gray-100"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="hidden sm:inline">GitHub</span>
             </a>
           </div>

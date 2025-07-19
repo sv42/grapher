@@ -112,13 +112,13 @@ function ValueTable({ functionExpression, xMin, xMax }) {
         <table className="w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-50">
-              <th className="border border-gray-300 px-4 py-2 text-left font-medium text-gray-700">
+              <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left font-medium text-gray-700 text-xs sm:text-sm">
                 x
               </th>
-              <th className="border border-gray-300 px-4 py-2 text-left font-medium text-gray-700">
+              <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left font-medium text-gray-700 text-xs sm:text-sm">
                 f(x)
               </th>
-              <th className="border border-gray-300 px-4 py-2 text-left font-medium text-gray-700">
+              <th className="border border-gray-300 px-2 sm:px-4 py-2 text-left font-medium text-gray-700 text-xs sm:text-sm hidden sm:table-cell">
                 Точка
               </th>
             </tr>
@@ -129,13 +129,13 @@ function ValueTable({ functionExpression, xMin, xMax }) {
                 key={index} 
                 className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
               >
-                <td className="border border-gray-300 px-4 py-2 font-mono text-sm">
+                <td className="border border-gray-300 px-2 sm:px-4 py-2 font-mono text-xs sm:text-sm">
                   {row.x}
                 </td>
-                <td className="border border-gray-300 px-4 py-2 font-mono text-sm">
+                <td className="border border-gray-300 px-2 sm:px-4 py-2 font-mono text-xs sm:text-sm">
                   {row.y}
                 </td>
-                <td className="border border-gray-300 px-4 py-2 text-sm text-gray-600">
+                <td className="border border-gray-300 px-2 sm:px-4 py-2 text-xs sm:text-sm text-gray-600 hidden sm:table-cell">
                   ({row.x}, {row.y})
                 </td>
               </tr>
